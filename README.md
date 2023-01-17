@@ -23,9 +23,9 @@ Workshop is a place where most people search when having problems with their veh
 ![image](https://user-images.githubusercontent.com/89789650/212973929-a77ca8a9-389c-40a3-865c-ba736a0a1be8.png)
 
 ## Goal and Expected output
-Goal :  To find the optimum route to the workshop
+**Goal** :  To find the optimum route to the workshop
 
-Expected output: One from the two algorithms gives a better solution to find optimum route distance.
+**Expected output**: One from the two algorithms gives a better solution to find optimum route distance.
 
 ## Ilustration of problem
 ![image](https://user-images.githubusercontent.com/89789650/212974413-cc17f0dc-4c21-4264-86f6-7fe45342125d.png)
@@ -37,5 +37,65 @@ Expected output: One from the two algorithms gives a better solution to find opt
 ![image](https://user-images.githubusercontent.com/89789650/212975075-fcd755c1-bbb9-484c-9379-b5eaf1a36a32.png)
 
 **Step 2:** Mapping possible intersection without map background (graph map)
+
+**Step 3:** Calculate the distance between points connected by the road and estimate the distance between point to the destination by using the help from Waze.
+
+![image](https://user-images.githubusercontent.com/89789650/212975668-221d84d2-23c6-447f-996e-aa118eee135c.png)
+![image](https://user-images.githubusercontent.com/89789650/212976194-253a0ba7-2f2e-42f2-a1f9-560d31286943.png)
+
+## Steps for calculating the shortest path
+### Djikstra's algorithm
+1. Initialize the distance dictionary with the start node having a distance of 0 and all other nodes having a distance of infinity.
+2. Initialize an empty priority queue to store the nodes to visit, a dictionary to store the previous node for each node and an empty set to store visited nodes.
+3. Add the start node to the priority queue with a distance of 0.
+4. While the priority queue is not empty:
+  - Pop the node with the smallest distance from the priority queue.
+  - If the node has already been visited, skip it.
+  - Mark the node as visited.
+  - Check if we have reached the end node, if yes break the while loop.
+  - For each neighbor of the current node, calculate the distance from the start node to the    neighbor via the current node.
+  -  If the calculated distance is less than the current distance for the neighbor, update the distance for the neighbor and store the current node as the previous node for the neighbor.
+  -   Add the neighbor to the priority queue with the updated distance.
+
+5. Create the shortest path by traversing the previous node dictionary from the end node to the start node and storing the traversed nodes in a list.
+
+  The Dijkstra algorithm uses a priority queue to find the shortest path from a starting node to all other nodes in a weighted graph. The algorithm starts by assigning a tentative distance value to every node, with the starting node having a distance of 0 and all other nodes having a distance of infinity. The algorithm then visits the node with the smallest tentative distance, updates the tentative distance for all of its neighbors, and marks the current node as visited. This process is repeated until the destination node is visited or there are no more unvisited nodes.
+  
+### Greedy algorithm
+1. Initialize an empty list called result, and add the start node to it.
+2. While the destination node is not in the result list:
+  - Set the current node as the last element in the result list.
+  - Set the shortest_path as the minimum value of the dictionary values of the current node in the graph.
+  - For each node and distance in the dictionary of the current node in the graph:
+    - Compare the distance with the shortest_path
+    - if the distance is equal to the shortest_path, add the node to the result list
+3. Return the result list
+  
+  The algorithm starts from the initial position and at each step, it chooses the node that is closest to the current position and adds it to the result list. This is the greedy step of the algorithm, where it always chooses the locally optimal solution, which is the node with the minimum distance to the current position, with the hope of finding the globally optimal solution (i.e. the shortest path)
+
+## Result
+### Djikstra's Algorithm
+- Shortest path between A and E: ['A', 'B', 'E']
+![image](https://user-images.githubusercontent.com/89789650/212978414-cc6cefff-201d-4f5a-8781-d411c5ae8c05.png)
+
+### Greedy Algorithm
+Node: A
+Next Node: B | Distance : 1.3
+Next Node: C | Distance : 1.2
+Node: C
+Next Node: B | Distance : 0.7
+Next Node: D | Distance : 0.6
+Node: D
+Next Node: E | Distance : 3.0
+
+Route from 'A' to 'E' : ['A', 'C', 'D', 'E']
+
+![image](https://user-images.githubusercontent.com/89789650/212978942-d9a09d53-aab9-4ba5-8794-bf966679822d.png)
+
+## Dependencies
+- The code was run by pthon (google colab)
+
+
+
 
 
