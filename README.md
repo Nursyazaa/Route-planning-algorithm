@@ -3,7 +3,7 @@ Find the shortest route using Greedy and Djikstra algorithm (Route planner appli
 
 This is the final project of SSK4106 Algorithm and Design Analysis.
 
-The objective of the project is to use A* search, Djikstra's and Greedy algorithm to implement a "Google-maps" style route planning algorithm.
+The objective of the project is to use Djikstra's and Greedy algorithm to implement a "Google-maps" style route planning algorithm.
 
 # Project content
 ## Introduction
@@ -14,34 +14,43 @@ The shortest path problem has been studied for many years. The shortest path pro
 Many algorithms solve the shortest path problem. In this case, Dijkstra’s algorithm and Greedy algorithm have been chosen. Dijkstra’s algorithm includes a graph search algorithm used to solve the shortest path problem with a single source on a graph that does not have a negative side cost and produces the shortest path tree. This algorithm is often used in routing. The Greedy algorithm is an approach for solving a problem by selecting the best option available at the moment. The algorithm never reverses the earlier decision even if the choice is wrong. It gives solutions in an optimal way.This project will compare Dijkstra’s algorithm and Greedy algorithm to solve the shortest path problem by finding the optimum solution.
 
 ## Scenario:
-Workshop is a place where most people search when having problems with their vehicle either required for service or towing. Therefore, to find the minimum distance of road from the broken car to the located workshop is the priority. Hence the road network is implemented to visualize all the roads to the workshop to find the most appropriate one. It is important to find the optimum solution as it can save time and solve the problem faster. Problems might arise if the problem is slow to resolve such as traffic congestion or in worse accidents could happen if other driver is not aware of the road surrounding.
+Workshop is a place where most people search when having problems with their vehicle either required for service or towing. Workshop will get a call from their customer asking for their service as soon as possible. Workshop shall find the minimum distance of road to the location of the broken car to provide help. Customers may be in urgent or have other work to do so they must want the help to arrive faster. Hence the road network is implemented to visualize all the roads to find the most appropriate route. It is important to find the optimum solution as it can save time and solve the problem faster. Problems might arise if the problem is slow to resolve such as traffic congestion or in worse accidents could happen if the other driver is not aware of the road surrounding.
 
-## Strength
-![image](https://user-images.githubusercontent.com/89789650/212973828-fe2f114a-26e5-480b-9ca8-e6715f9677e5.png)
-
-## Weakness
-![image](https://user-images.githubusercontent.com/89789650/212973929-a77ca8a9-389c-40a3-865c-ba736a0a1be8.png)
+##Setting:
+-**Geographical Setting** : Seri Kembangan, Selangor
+-**Type of Disaster** : Broke down car
+-**Damage Impact** : Traffic
 
 ## Goal and Expected output
-**Goal** :  To find the optimum route to the workshop
+**Goal** :  To find the optimum route from the workshop to the car location by comparing Dijkstra and Greedy algorithms.
 
 **Expected output**: One from the two algorithms gives a better solution to find optimum route distance.
 
-## Ilustration of problem
-![image](https://user-images.githubusercontent.com/89789650/212974413-cc17f0dc-4c21-4264-86f6-7fe45342125d.png)
+## Strength
+![image](https://user-images.githubusercontent.com/89789650/213469158-be78735d-0e82-4fcc-9e03-bc71889bee0a.png)
 
-**Step 1:** Define start and final point (destination location)
+## Weakness
+![image](https://user-images.githubusercontent.com/89789650/213469290-003c6fa7-ba9b-4d9c-a084-32a85cc43f16.png)
+
+## Ilustration of problem
 - **Blue**: Start point
 - **Red**: Final point
 
-![image](https://user-images.githubusercontent.com/89789650/212975075-fcd755c1-bbb9-484c-9379-b5eaf1a36a32.png)
+###Figure 1 
+**Define start and final point (destination location)**
+![image](https://user-images.githubusercontent.com/89789650/213469607-a63ab0a2-630b-46d3-a94d-cda09c49c15d.png)
 
-**Step 2:** Mapping possible intersection without map background (graph map)
+###Figure 2
+***Mapping possible intersection with map background
+![image](https://user-images.githubusercontent.com/89789650/213469973-92e4bd84-b504-45f6-a621-64eebb7eac47.png)
 
-**Step 3:** Calculate the distance between points connected by the road and estimate the distance between point to the destination by using the help from Waze.
+###Figure 3
+**Mapping possible intersection without map background**
+![image](https://user-images.githubusercontent.com/89789650/213470201-0870d31a-d3a2-462e-a4fd-9902645713ce.png)
 
-![image](https://user-images.githubusercontent.com/89789650/212975668-221d84d2-23c6-447f-996e-aa118eee135c.png)
-![image](https://user-images.githubusercontent.com/89789650/212976194-253a0ba7-2f2e-42f2-a1f9-560d31286943.png)
+**After that, calculate the distance between points connected by the road and estimate the distance between point to the destination by using the help from Waze.**
+
+![image](https://user-images.githubusercontent.com/89789650/213470467-3eb41b4d-97ec-4652-a1da-33d8f7c5f8a0.png)
 
 ## Steps for calculating the shortest path
 ### Djikstra's algorithm
