@@ -226,6 +226,13 @@ Based on the design and analysis of the algorithm that we do in this project, we
 ## Dependencies
 - The code was run by Python 3.8 (google colab)
 
+## Reference
+- https://github.com/wahidari/Greedy-Shortest-Path
+- https://iopscience.iop.org/article/10.1088/1742-6596/1566/1/012061/pdf
+- https://www.cs.usfca.edu/~galles/visualization/Dijkstra.html
+-  https://iq.opengenus.org/time-and-space-complexity-of-dijkstra-algorithm/ 
+
+
 
 
 
