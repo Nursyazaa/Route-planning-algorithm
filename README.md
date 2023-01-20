@@ -66,7 +66,7 @@ Workshop is a place where most people search when having problems with their veh
   - If the node has already been visited, skip it.
   - Mark the node as visited.
   - Check if we have reached the end node, if yes break the while loop.
-  - For each neighbor of the current node, calculate the distance from the start node to the    neighbor via the current node.
+  - For each neighbor of the current node, calculate the distance from the start node to the neighbor via the current node.
   -  If the calculated distance is less than the current distance for the neighbor, update the distance for the neighbor and store the current node as the previous node for the neighbor.
   -   Add the neighbor to the priority queue with the updated distance.
 
