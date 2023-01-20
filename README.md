@@ -99,9 +99,9 @@ Workshop is a place where most people search when having problems with their veh
   -  Add "current_node" to "visited"
   - If "current_node" is the end node, break out of the loop
   -  For each neighbor and weight of "current_node" in the graph:
-    - Calculate the distance to the neighbor as the current distance plus the weight
-    - If the calculated distance is less than the current distance of the neighbor in "distances", update the distance and set the previous node of the neighbor to the current node
-    Add the neighbor to the queue with the calculated distance
+     - Calculate the distance to the neighbor as the current distance plus the weight
+     - If the calculated distance is less than the current distance of the neighbor in "distances", update the distance and set the previous node of the neighbor to the current node
+     - Add the neighbor to the queue with the calculated distance
 7. Initialize an empty list "shortest_path"
 8. Set "current_node" to the end node
 9. While "current_node" is not None:
