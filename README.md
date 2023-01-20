@@ -133,10 +133,12 @@ Draw the nodes, edges, and labels of the graph on the layout
 ## Result
 ### Djikstra's Algorithm
 ![image](https://user-images.githubusercontent.com/89789650/213569420-082bf818-b2e9-49da-804c-490340845958.png)
+
 The algorithm starts at a given node (in this case, "A") and visits all its neighboring nodes, updating the distance to each node as it visits them. The algorithm uses a priority queue (implemented using the heapq library) to prioritize visiting the node that is closest to the starting node. The function 'shortest_path_dijkstra' takes in the graph, starting node, and the destination node as input. The function returns the shortest path from the start node to the end node.
 
 ### Greedy Algorithm
 ![image](https://user-images.githubusercontent.com/89789650/213569552-138393a4-71b2-455b-9fa0-dc968eca2f62.png)
+
 For this algorithm, it starts at the given start node and at each step it chooses the neighboring node that has the smallest distance from the current node. It then continues to the next node with the smallest distance and so on, until it reaches the destination node. The algorithm makes the locally optimal choice of choosing the neighboring node with the smallest distance, but it does not consider if that choice will lead to the global optimal solution (i.e the shortest path from start to destination).
 
 ## Running time comparison
