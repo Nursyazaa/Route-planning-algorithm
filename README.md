@@ -3,7 +3,7 @@ Find the shortest route using Greedy and Djikstra algorithm (Route planner appli
 
 This is the final project of SSK4106 Algorithm and Design Analysis.
 
-The objective of the project is to use Djikstra's and Greedy algorithm to implement a "Google-maps" style route planning algorithm.
+The objective of the project is to use Djikstra's and Greedy algorithm to implement a "Waze" style route planning algorithm.
 
 # Project content
 ## Introduction
