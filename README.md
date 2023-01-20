@@ -148,7 +148,7 @@ Dijkstra's algorithm is a more optimal algorithm than the Greedy algorithm becau
 
 In summary, Dijkstra's algorithm is more optimal and efficient than the Greedy algorithm, especially when applied to large graphs or graphs with negative edge weights.
 
-## Algorithm anaysis
+## Algorithm analysis
 ### Time complexity
 **Djikstra's Algorithm**
 
