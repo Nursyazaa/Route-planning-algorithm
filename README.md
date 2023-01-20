@@ -72,7 +72,7 @@ Workshop is a place where most people search when having problems with their veh
 
 5. Create the shortest path by traversing the previous node dictionary from the end node to the start node and storing the traversed nodes in a list.
 
-  The Dijkstra algorithm uses a priority queue to find the shortest path from a starting node to all other nodes in a weighted graph. The algorithm starts by assigning a tentative distance value to every node, with the starting node having a distance of 0 and all other nodes having a distance of infinity. The algorithm then visits the node with the smallest tentative distance, updates the tentative distance for all of its neighbors, and marks the current node as visited. This process is repeated until the destination node is visited or there are no more unvisited nodes.
+ The Dijkstra algorithm uses a priority queue to find the shortest path from a starting node to all other nodes in a weighted graph. The algorithm starts by assigning a tentative distance value to every node, with the starting node having a distance of 0 and all other nodes having a distance of infinity. The algorithm then visits the node with the smallest tentative distance, updates the tentative distance for all of its neighbors, and marks the current node as visited. This process is repeated until the destination node is visited or there are no more unvisited nodes.
   
 ### Greedy algorithm
 1. Initialize an empty list called result, and add the start node to it.
@@ -134,7 +134,7 @@ Draw the nodes, edges, and labels of the graph on the layout
 ### Djikstra's Algorithm
 ![image](https://user-images.githubusercontent.com/89789650/213569420-082bf818-b2e9-49da-804c-490340845958.png)
 
-The algorithm starts at a given node (in this case, "A") and visits all its neighboring nodes, updating the distance to each node as it visits them. The algorithm uses a priority queue (implemented using the heapq library) to prioritize visiting the node that is closest to the starting node. The function 'shortest_path_dijkstra' takes in the graph, starting node, and the destination node as input. The function returns the shortest path from the start node to the end node.
+The algorithm starts at a given node (in this case, "A") and visits all its neighboring nodes, updating the distance to each node as it visits them. The algorithm uses a priority queue (implemented using the heap library) to prioritize visiting the node that is closest to the starting node. The function 'shortest_path_dijkstra' takes in the graph, starting node, and the destination node as input. The function returns the shortest path from the start node to the end node.
 
 ### Greedy Algorithm
 ![image](https://user-images.githubusercontent.com/89789650/213569552-138393a4-71b2-455b-9fa0-dc968eca2f62.png)
@@ -146,7 +146,7 @@ We take 3 tries for each Dijkstra and Greedy Algorithm, running times are shown 
 ![image](https://user-images.githubusercontent.com/89789650/213569686-d1916086-e53a-42f1-acc6-e8da6d24fced.png)
 
 ## Discussion
-Dijkstra's algorithm is a more optimal algorithm than the Greedy algorithm because it uses a priority queue to determine the next node to visit, taking into account not only the current distance but also the estimated distance to the destination. This makes Dijkstra's algorithm more efficient and less prone to getting stuck in locally optimal solutions.Additionally, Dijkstra's algorithm can also handle graphs with negative edge weights, while the greedy algorithm cannot.
+Dijkstra's algorithm is a more optimal algorithm than the Greedy algorithm because it uses a queue to determine the next node to visit, taking into account not only the current distance but also the estimated distance to the destination. This makes Dijkstra's algorithm more efficient and less prone to getting stuck in locally optimal solutions.Additionally, Dijkstra's algorithm can also handle graphs with negative edge weights, while the greedy algorithm cannot.
 
 In summary, Dijkstra's algorithm is more optimal and efficient than the Greedy algorithm, especially when applied to large graphs or graphs with negative edge weights.
 
