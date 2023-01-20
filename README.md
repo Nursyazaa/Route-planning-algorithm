@@ -194,6 +194,7 @@ The same situation occurs in best case since again the array is unsorted:
 
 Total: O(V^2)
 
+### Complexity Comparison
 ![image](https://user-images.githubusercontent.com/89789650/213570664-f5a7ef22-d8c6-4f1c-b54c-d57bdb90055d.png)
 
 In conclusion, Dijikstra’s algorithms has lesser time complexity compared to greedy algorithm in the best, average and worst cases.
